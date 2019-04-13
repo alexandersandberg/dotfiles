@@ -13,8 +13,8 @@ alias reload="source ~/.bash_profile"
 
 alias ..="cd ../"
 alias ...="cd ../../"
-alias ls="ls -Glp"
-alias lsa="ls -alp"
+alias ls="ls -aGp"
+alias lsl"ls -l"
 alias f='open -a Finder ./'
 alias dev="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/webdev/"
 alias home="cd ~"
