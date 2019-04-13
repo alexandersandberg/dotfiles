@@ -1,3 +1,3 @@
 # dotfiles
 
-My dotfiles 🐨
+This repo contains my dotfiles 🐨
