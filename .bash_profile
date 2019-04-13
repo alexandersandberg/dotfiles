@@ -9,6 +9,7 @@ we @ \[\e[36m\]\w\[\e[m\]
 🐨 -->'
 
 # aliases
+alias config="atom ~/.bash_profile"
 alias reload="source ~/.bash_profile"
 
 alias ..="cd ../"
