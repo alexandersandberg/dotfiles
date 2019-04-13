@@ -15,13 +15,13 @@ alias reload="source ~/.bash_profile"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ls="ls -aGp"
-alias lsl"ls -l"
+alias lsl="ls -l"
 alias f='open -a Finder ./'
 alias dev="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/webdev/"
 alias home="cd ~"
 
 # https://github.com/chubin/wttr.in
-alias weather='echo "————————————————————"
+alias weather='echo "——————————————————————————————"
 curl http://wttr.in/{Moon?format=%m,Lulea?format="++++%l:+%c++%t+%2F+%w",Stockholm?format="%l:+%c++%t+%2F+%w"}'
 
 # git
