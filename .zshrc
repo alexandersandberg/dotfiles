@@ -18,6 +18,23 @@ PROMPT='————————————————————
 we @ %F{cyan}%d %f
 🐨 -->'
 
+# functions
+typeset -A endDates
+endDates=("20190524" "days until freedom! 🦄"
+		 )
+countdowns() {
+	echo "————————————————————"
+	for k v in "${(@kv)endDates}"
+	do
+		echo $(expr '(' $(date -jf %Y%m%d $k +%s) - $(date +%s) + 86399 ')' / 86400) $v
+	done
+}
+
+today() {
+	countdowns
+	weather
+}
+
 # aliases
 alias config="atom ~/.zshrc"
 alias reload="source ~/.zshrc"
