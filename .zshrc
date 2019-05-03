@@ -45,8 +45,8 @@ eval $(thefuck --alias fk)
 
 # functions
 typeset -A endDates
-endDates=("20190524" "days until freedom! 🦄"
-		 )
+endDates=("20190524" "days until freedom! 🦄")
+
 countdowns() {
 	echo "————————————————————"
 	for k v in "${(@kv)endDates}"
