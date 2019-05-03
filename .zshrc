@@ -18,23 +18,6 @@ PROMPT='————————————————————
 we @ %F{cyan}%d %f
 🐨 -->'
 
-# functions
-typeset -A endDates
-endDates=("20190524" "days until freedom! 🦄"
-		 )
-countdowns() {
-	echo "————————————————————"
-	for k v in "${(@kv)endDates}"
-	do
-		echo $(expr '(' $(date -jf %Y%m%d $k +%s) - $(date +%s) + 86399 ')' / 86400) $v
-	done
-}
-
-today() {
-	countdowns
-	weather
-}
-
 # aliases
 alias config="atom ~/.zshrc"
 alias reload="source ~/.zshrc"
@@ -54,7 +37,25 @@ curl http://wttr.in/{Moon\?format="%m",Lulea\?format="++++%l:+%c++%t+%2F+%w",Sto
 
 # git
 alias push="git push origin master"
+alias gs="git status"
 
 # https://github.com/nvbn/thefuck
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
+
+# functions
+typeset -A endDates
+endDates=("20190524" "days until freedom! 🦄"
+		 )
+countdowns() {
+	echo "————————————————————"
+	for k v in "${(@kv)endDates}"
+	do
+		echo $(expr '(' $(date -jf %Y%m%d $k +%s) - $(date +%s) + 86399 ')' / 86400) $v
+	done
+}
+
+today() {
+	countdowns
+	weather
+}
