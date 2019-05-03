@@ -19,7 +19,7 @@ we @ %F{cyan}%d %f
 🐨 -->'
 
 # aliases
-alias config="atom ~/.zshrc"
+alias config="code ~/.zshrc"
 alias reload="source ~/.zshrc"
 
 alias ..="cd ../"
