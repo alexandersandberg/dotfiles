@@ -29,7 +29,7 @@ alias ...="cd ../../"
 alias ls="ls -Gp"
 alias lsl="ls -l"
 alias f='open -a Finder ./'
-alias dev="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/webdev/"
+alias dev="cd ~/webdev/"
 alias home="cd ~"
 alias gh="open https://github.com/alexandersandberg"
 
