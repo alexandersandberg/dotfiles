@@ -60,3 +60,14 @@ today() {
 	countdowns
 	weather
 }
+
+gitall() {
+  git add .
+  if [ -n "$1" ]
+  then
+      git commit -m "$1"
+  else
+      git commit -m update
+  fi
+  git push
+}
