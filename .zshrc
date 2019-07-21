@@ -32,6 +32,8 @@ alias f='open -a Finder ./'
 alias dev="cd ~/webdev/"
 alias home="cd ~"
 alias gh="open https://github.com/alexandersandberg"
+alias as="open https://alexandersandberg.com"
+alias tw="open https://twitter.com/home"
 
 # https://github.com/chubin/wttr.in
 alias weather='curl http://wttr.in/{Moon\?format="%m",Lulea\?format="++++%l:+%c++%t+%2F+%w",Stockholm\?format="%l:+%c++%t+%2F+%w"}'
