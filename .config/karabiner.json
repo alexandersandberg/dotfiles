@@ -452,6 +452,33 @@
 															"type": "basic"
 													}
 											]
+									},
+									{
+											"description": "One stroke backtick if using Right Shift",
+											"manipulators": [
+													{
+															"from": {
+																	"key_code": "equal_sign",
+																	"modifiers": {
+																			"mandatory": [
+																					"right_shift"
+																			]
+																	}
+															},
+															"to": [
+																	{
+																		"key_code": "equal_sign",
+																		"modifiers": [
+																				"right_shift"
+																		]
+																	},
+																	{
+																			"key_code": "spacebar"
+																	}
+															],
+															"type": "basic"
+													}
+											]
 									}
 							]
 					},
@@ -487,6 +514,22 @@
 													},
 													"to": {
 															"consumer_key_code": "play_or_pause"
+													}
+											},
+											{
+													"from": {
+															"key_code": "page_down"
+													},
+													"to": {
+															"consumer_key_code": "volume_decrement"
+													}
+											},
+											{
+													"from": {
+															"key_code": "page_up"
+													},
+													"to": {
+															"consumer_key_code": "volume_increment"
 													}
 											},
 											{
