@@ -1,0 +1,7 @@
+[user]
+	name = Alexander Sandberg
+	email = hi@alexandersandberg.com
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = ~/.gitignore
