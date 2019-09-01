@@ -36,7 +36,7 @@ alias as="open https://alexandersandberg.com"
 alias tw="open https://twitter.com/home"
 
 # https://github.com/chubin/wttr.in
-alias weather='curl http://wttr.in/{Moon\?format="%m",Lulea\?format="++++%l:+%c++%t+%2F+%w",Stockholm\?format="%l:+%c++%t+%2F+%w"}'
+alias weather='curl http://wttr.in/{Moon\?format="%m",Linz\?format="+++++%l:+%c++%t+%2F+%w",Lulea\?format="++++%l:+%c++%t+%2F+%w",Stockholm\?format="%l:+%c++%t+%2F+%w"}'
 
 # git
 alias push="git push origin master"
