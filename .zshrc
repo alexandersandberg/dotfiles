@@ -10,6 +10,13 @@ source $ZSH/oh-my-zsh.sh
 
 export LC_ALL=en_US.UTF-8
 
+# android development
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
@@ -29,7 +36,7 @@ alias ...="cd ../../"
 alias ls="ls -Gp"
 alias lsl="ls -l"
 alias f='open -a Finder ./'
-alias dev="cd ~/webdev/"
+alias dev="cd ~/dev/"
 alias home="cd ~"
 alias gh="open https://github.com/alexandersandberg"
 alias as="open https://alexandersandberg.com"
@@ -41,6 +48,10 @@ alias weather='curl http://wttr.in/{Moon\?format="%m",Linz\?format="+++++%l:+%c+
 # git
 alias push="git push origin master"
 alias gs="git status"
+
+# react native
+alias rni="react-native run-ios"
+alias rna="react-native run-android --variant devDebug --appIdSuffix debug"
 
 # https://github.com/nvbn/thefuck
 eval $(thefuck --alias)
