@@ -48,6 +48,7 @@ alias weather='curl http://wttr.in/{Moon\?format="%m",Linz\?format="+++++%l:+%c+
 # git
 alias push="git push origin master"
 alias gs="git status"
+alias gp="git remote prune origin"
 
 # react native
 alias rni="react-native run-ios"
