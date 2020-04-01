@@ -54,7 +54,7 @@ alias gp="git remote prune origin"
 
 # react native
 alias rni="react-native run-ios"
-alias rna="react-native run-android --appIdSuffix debug"
+alias rna="react-native run-android --variant debug --appIdSuffix debug"
 
 # https://github.com/nvbn/thefuck
 eval $(thefuck --alias)
