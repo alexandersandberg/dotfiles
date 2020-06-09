@@ -7,6 +7,7 @@ ZSH_THEME="dracula"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source ~/alias.sh
 
 export LC_ALL=en_US.UTF-8
 
@@ -47,7 +48,7 @@ alias weather='curl http://wttr.in/{Moon\?format="%m",Linz\?format="+++++%l:+%c+
 
 # git
 alias push="git push origin master"
-alias gs="git status"
+alias gs="git status -s"
 alias gr="git reset HEAD~"
 alias grs="git reset --soft HEAD~"
 alias gp="git remote prune origin"
