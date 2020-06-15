@@ -49,6 +49,7 @@ alias weather='curl http://wttr.in/{Moon\?format="%m",Linz\?format="+++++%l:+%c+
 # git
 alias push="git push origin master"
 alias gs="git status -s"
+alias gl="git log --oneline --decorate --all"
 alias gr="git reset HEAD~"
 alias grs="git reset --soft HEAD~"
 alias gp="git remote prune origin"
