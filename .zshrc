@@ -43,9 +43,6 @@ alias gh="open https://github.com/alexandersandberg"
 alias as="open https://alexandersandberg.com"
 alias tw="open https://twitter.com/home"
 
-# https://github.com/chubin/wttr.in
-alias weather='curl http://wttr.in/{Moon\?format="%m",Linz\?format="+++++%l:+%c++%t+%2F+%w",Lulea\?format="++++%l:+%c++%t+%2F+%w",Stockholm\?format="%l:+%c++%t+%2F+%w"}'
-
 # git
 alias push="git push origin master"
 alias gs="git status -s"
@@ -64,31 +61,3 @@ alias pi="npx pod-install"
 # https://github.com/nvbn/thefuck
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
-
-# functions
-typeset -A endDates
-endDates=()
-countdowns() {
-	for k v in "${(@kv)endDates}"
-	do
-		echo "
-$(expr '(' $(date -jf %Y%m%d $k +%s) - $(date +%s) + 86399 ')' / 86400) $v
-"
-	done
-}
-
-today() {
-	countdowns
-	weather
-}
-
-gitall() {
-  git add .
-  if [ -n "$1" ]
-  then
-      git commit -m "$1"
-  else
-      git commit -m update
-  fi
-  git push
-}
