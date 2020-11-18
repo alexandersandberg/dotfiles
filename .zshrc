@@ -45,6 +45,7 @@ alias tw="open https://twitter.com/home"
 
 # git
 alias push="git push origin master"
+alias pushf="git push origin master -f"
 alias gs="git status -s"
 alias gl="git log --oneline --decorate"
 alias gla="git log --oneline --decorate --all"
