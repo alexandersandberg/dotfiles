@@ -507,6 +507,43 @@
 															"type": "basic"
 													}
 											]
+									},
+									{
+											"description": "Rewind and fast forward with top-right keys",
+											"manipulators": [
+													{
+															"from": {
+																	"consumer_key_code": "play_or_pause",
+																	"modifiers": {
+																			"mandatory": [
+																					"right_option"
+																			]
+																	}
+															},
+															"to": [
+																	{
+																			"key_code": "rewind"
+																	}
+															],
+															"type": "basic"
+													},
+													{
+															"from": {
+																	"consumer_key_code": "volume_increment",
+																	"modifiers": {
+																			"mandatory": [
+																					"right_option"
+																			]
+																	}
+															},
+															"to": [
+																	{
+																			"key_code": "fastforward"
+																	}
+															],
+															"type": "basic"
+													}
+											]
 									}
 							]
 					},
@@ -538,6 +575,14 @@
 									"simple_modifications": [
 											{
 													"from": {
+															"key_code": "delete_forward"
+													},
+													"to": {
+															"key_code": "mute"
+													}
+											},
+											{
+													"from": {
 															"key_code": "insert"
 													},
 													"to": {
@@ -566,14 +611,6 @@
 													},
 													"to": {
 															"key_code": "right_option"
-													}
-											},
-											{
-													"from": {
-															"key_code": "delete_forward"
-													},
-													"to": {
-															"key_code": "mute"
 													}
 											}
 									]
