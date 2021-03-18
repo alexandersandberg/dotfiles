@@ -55,7 +55,7 @@ alias gp="git remote prune origin"
 
 # react native
 alias rni="npx react-native run-ios"
-alias rna="npx react-native run-android --variant debug --appIdSuffix debug"
+alias rna="npx react-native run-android"
 alias rnaab="cd android && ./gradlew bundleRelease && cd .."
 alias pi="npx pod-install"
 
