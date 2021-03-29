@@ -1,4 +1,4 @@
-export ZSH="/Users/alex/.oh-my-zsh"
+export ZSH="/Users/alexandersandberg/.oh-my-zsh"
 
 # theme
 ZSH_THEME="dracula"
@@ -7,7 +7,6 @@ ZSH_THEME="dracula"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source ~/alias.sh
 
 export LC_ALL=en_US.UTF-8
 
@@ -59,7 +58,3 @@ alias rna="npx react-native run-android"
 alias rnar="npx react-native run-android --variant release"
 alias rnaab="cd android && ./gradlew bundleRelease && cd .."
 alias pi="npx pod-install"
-
-# https://github.com/nvbn/thefuck
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
