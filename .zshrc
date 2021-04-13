@@ -10,6 +10,10 @@ source $ZSH/oh-my-zsh.sh
 
 export LC_ALL=en_US.UTF-8
 
+# fix keybinds
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
+
 # android development
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -38,7 +42,6 @@ alias lsl="ls -l"
 alias f='open -a Finder ./'
 alias dev="cd ~/dev/"
 alias home="cd ~"
-alias gh="open https://github.com/alexandersandberg"
 alias as="open https://alexandersandberg.com"
 alias tw="open https://twitter.com/home"
 
@@ -58,3 +61,6 @@ alias rna="npx react-native run-android"
 alias rnar="npx react-native run-android --variant release"
 alias rnaab="cd android && ./gradlew bundleRelease && cd .."
 alias pi="npx pod-install"
+
+# tempo
+alias temporni="npx react-native run-ios --verbose --configuration Debug --device"
