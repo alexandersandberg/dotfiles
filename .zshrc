@@ -62,5 +62,8 @@ alias rnar="npx react-native run-android --variant release"
 alias rnaab="cd android && ./gradlew bundleRelease && cd .."
 alias pi="npx pod-install"
 
+# m1 hacks
+alias m1pi="arch -x86_64 npx pod-install"
+
 # tempo
 alias temporni="npx react-native run-ios --verbose --configuration Debug --device"
