@@ -544,6 +544,27 @@
 															"type": "basic"
 													}
 											]
+									},
+									{
+											"description": "Left option + Caps Lock (Return) to delete",
+											"manipulators": [
+													{
+															"from": {
+																	"key_code": "return_or_enter",
+																	"modifiers": {
+																			"mandatory": [
+																					"left_option"
+																			]
+																	}
+															},
+															"to": [
+																	{
+																			"key_code": "delete_or_backspace"
+																	}
+															],
+															"type": "basic"
+													}
+											]
 									}
 							]
 					},
