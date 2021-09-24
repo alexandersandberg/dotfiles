@@ -1,0 +1,7 @@
+<key>@alexandersandberg's Custom Key Bindings</key>
+<dict>
+		<key>Insert New Line Below Current</key>
+		<string>moveToEndOfParagraph:, insertNewline:</string>
+		<key>Insert New Line Above Current</key>
+		<string>moveToBeginningOfParagraph:, moveUp:, moveToEndOfParagraph:, insertNewline:</string>
+</dict>
