@@ -65,5 +65,5 @@ alias pi="npx pod-install"
 # m1 hacks
 alias m1pi="arch -x86_64 npx pod-install"
 
-# tempo
-alias temporni="npx react-native run-ios --verbose --configuration Debug --device"
+# other
+alias fuspotlight="cd ~/Library/Developer/CoreSimulator/Devices && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\" && cd ~/Library/Developer/Xcode/UserData/Previews/Simulator\ Devices/ && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\""
