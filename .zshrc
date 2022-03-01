@@ -54,6 +54,9 @@ alias gla="git log --oneline --decorate --all"
 alias gr="git reset HEAD~"
 alias grs="git reset --soft HEAD~"
 alias gp="git remote prune origin"
+alias ga="git add ."
+alias gap="git add -p"
+alias gc="git commit -m"
 
 # react native
 alias rni="npx react-native run-ios"
