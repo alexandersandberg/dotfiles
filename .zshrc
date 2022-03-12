@@ -56,7 +56,7 @@ alias grs="git reset --soft HEAD~"
 alias gp="git remote prune origin"
 alias ga="git add ."
 alias gap="git add -p"
-alias gc="git commit -m"
+alias gm="git commit -m"
 
 # react native
 alias rni="npx react-native run-ios"
@@ -64,9 +64,6 @@ alias rna="npx react-native run-android --appIdSuffix dev"
 alias rnar="npx react-native run-android --variant release"
 alias rnaab="cd android && ./gradlew bundleRelease && cd .."
 alias pi="npx pod-install"
-
-# m1 hacks
-alias m1pi="arch -x86_64 npx pod-install"
 
 # other
 alias fuspotlight="cd ~/Library/Developer/CoreSimulator/Devices && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\" && cd ~/Library/Developer/Xcode/UserData/Previews/Simulator\ Devices/ && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\""
