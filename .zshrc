@@ -43,7 +43,9 @@ alias f='open -a Finder ./'
 alias dev="cd ~/dev/"
 alias home="cd ~"
 alias as="open https://alexandersandberg.com"
-alias tw="open https://twitter.com/home"
+
+# node
+alias nr="npm run"
 
 # git
 alias gc="git checkout"
@@ -70,3 +72,9 @@ alias pi="npx pod-install"
 
 # other
 alias fuspotlight="cd ~/Library/Developer/CoreSimulator/Devices && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\" && cd ~/Library/Developer/Xcode/UserData/Previews/Simulator\ Devices/ && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\""
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/work/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/work/Desktop/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/work/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/work/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
