@@ -1,5 +1,9 @@
 export ZSH="/Users/alexandersandberg/.oh-my-zsh"
 
+export PATH="$HOME/.gem/ruby/3.1.1/bin:$PATH"
+export PATH="$HOME/Library/Python/3.11/bin:$PATH"
+eval "$(rbenv init - zsh)"
+
 # theme
 ZSH_THEME="dracula"
 
@@ -13,13 +17,6 @@ export LC_ALL=en_US.UTF-8
 # fix keybinds
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
-
-# android development
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -65,12 +62,6 @@ alias grs="git reset --soft HEAD~"
 alias gpr="git remote prune origin"
 alias gcl="git clean -df"
 
-# react native
-alias rni="npx react-native run-ios"
-alias rna="npx react-native run-android --appIdSuffix dev"
-alias rnar="npx react-native run-android --variant release"
-alias rnaab="cd android && ./gradlew bundleRelease && cd .."
-alias pi="npx pod-install"
 
 # other
 alias fuspotlight="cd ~/Library/Developer/CoreSimulator/Devices && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\" && cd ~/Library/Developer/Xcode/UserData/Previews/Simulator\ Devices/ && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\""
