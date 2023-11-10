@@ -14,12 +14,13 @@ bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
 # Aliases
-alias config="vim ~/.zshrc"
+alias config="edit ~/.zshrc"
 alias reload="source ~/.zshrc"
 
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ls="ls -Gp"
+alias lsa="ls -a"
 alias lsl="ls -l"
 alias f='open -a Finder ./'
 alias dev="cd ~/dev/"
