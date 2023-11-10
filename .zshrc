@@ -1,35 +1,20 @@
-export ZSH="/Users/alexandersandberg/.oh-my-zsh"
+# Prompt
+autoload -Uz vcs_info
+precmd() { vcs_info }
 
-export PATH="$HOME/.gem/ruby/3.1.1/bin:$PATH"
-export PATH="$HOME/Library/Python/3.11/bin:$PATH"
-eval "$(rbenv init - zsh)"
+zstyle ':vcs_info:git:*' formats '%b'
 
-# theme
-ZSH_THEME="dracula"
+setopt PROMPT_SUBST
+PROMPT='
+🐨 %B%F{blue}%~%f %F{cyan}${vcs_info_msg_0_:+(${vcs_info_msg_0_}) }%f%b%(?:%F{green}✓%f:%F{red}✖%f)
+-> '
 
-# plugins
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-export LC_ALL=en_US.UTF-8
-
-# fix keybinds
+# Fix history keybinds
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# customized based on dracula theme's prompt
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-PROMPT='
-${ret_status}%{$fg_bold[green]%}%p %{$fg_bold[blue]%}%c $(git_prompt_info)% %{$reset_color%}
-🐨  -->'
-
-# aliases
-alias config="code ~/.zshrc"
+# Aliases
+alias config="vim ~/.zshrc"
 alias reload="source ~/.zshrc"
 
 alias ..="cd ../"
@@ -39,12 +24,11 @@ alias lsl="ls -l"
 alias f='open -a Finder ./'
 alias dev="cd ~/dev/"
 alias home="cd ~"
+
 alias as="open https://alexandersandberg.com"
 
-# node
 alias nr="npm run"
 
-# git
 alias gc="git checkout"
 alias ga="git add ."
 alias gap="git add -p"
@@ -62,8 +46,6 @@ alias grs="git reset --soft HEAD~"
 alias gpr="git remote prune origin"
 alias gcl="git clean -df"
 
-# github cli
 alias ghpr="gh pr checkout"
 
-# other
 alias fuspotlight="cd ~/Library/Developer/CoreSimulator/Devices && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\" && cd ~/Library/Developer/Xcode/UserData/Previews/Simulator\ Devices/ && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\""
