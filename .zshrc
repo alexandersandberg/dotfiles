@@ -27,6 +27,8 @@ alias home="cd ~"
 
 alias as="open https://alexandersandberg.com"
 
+alias edit="open -a TextEdit"
+
 alias nr="npm run"
 
 alias gc="git checkout"
