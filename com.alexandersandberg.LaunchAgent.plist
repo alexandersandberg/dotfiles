@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.alexandersandberg.KeyRemapping</string>
+    <string>com.alexandersandberg.LaunchAgent</string>
     <key>ProgramArguments</key>
     <array>
         <string>/usr/bin/hidutil</string>
