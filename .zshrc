@@ -30,8 +30,6 @@ alias as="open https://alexandersandberg.com"
 
 alias edit="open -a TextEdit"
 
-alias nr="npm run"
-
 alias gc="git checkout"
 alias ga="git add ."
 alias gap="git add -p"
@@ -53,5 +51,9 @@ alias gpr="git remote prune origin"
 alias gcl="git clean -df"
 
 alias ghpr="gh pr checkout"
+
+alias sr=swift run
+
+alias nr="npm run"
 
 alias fuspotlight="cd ~/Library/Developer/CoreSimulator/Devices && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\" && cd ~/Library/Developer/Xcode/UserData/Previews/Simulator\ Devices/ && find . -name com.apple.suggestions.plist -exec plutil -replace SuggestionsAppLibraryEnabled -bool NO {} \";\""
