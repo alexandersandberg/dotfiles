@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Configuration: Set to "true" if using API billing, "false" for Pro/Max subscription
+SHOW_COST=true
+
 # Read JSON input from stdin
 input=$(cat)
 
@@ -27,11 +30,14 @@ bar=""
 for ((i=0; i<filled; i++)); do bar+="█"; done
 for ((i=0; i<empty; i++)); do bar+="░"; done
 
-# Extract cost information - only show if on API billing
-api_key_present=$(echo "$input" | jq -r '.api_key // "null"')
-session_cost=$(echo "$input" | jq -r '.cost.total_cost_usd // "null"')
-if [ "$api_key_present" != "null" ] && [ "$session_cost" != "null" ] && [ -n "$session_cost" ]; then
- session_cost=$(printf "%.4f" "$session_cost" 2>/dev/null || echo "")
+# Extract cost information - only if configured to show
+if [ "$SHOW_COST" = "true" ]; then
+ cost_value=$(echo "$input" | jq -r '.cost.total_cost_usd // 0')
+ if [ "$cost_value" != "0" ]; then
+  session_cost=$(printf "%.4f" "$cost_value")
+ else
+  session_cost=""
+ fi
 else
  session_cost=""
 fi
