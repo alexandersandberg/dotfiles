@@ -31,6 +31,7 @@ alias as="open https://alexandersandberg.com"
 alias edit="open -a TextEdit"
 
 alias gc="git checkout"
+alias gcm="git checkout main"
 alias ga="git add ."
 alias gap="git add -p"
 alias gm="git commit -m"
