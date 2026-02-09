@@ -14,7 +14,7 @@ current_dir=$(echo "$input" | jq -r '.workspace.current_dir')
 if [ "$SHOW_COST" = "true" ]; then
  cost_value=$(echo "$input" | jq -r '.cost.total_cost_usd // 0')
  if [ "$cost_value" != "0" ]; then
-  session_cost=$(printf "%.4f" "$cost_value")
+  session_cost=$(printf "%.2f" "$cost_value")
  else
   session_cost=""
  fi
