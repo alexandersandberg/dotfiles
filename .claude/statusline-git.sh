@@ -7,7 +7,7 @@ SHOW_COST=true
 input=$(cat)
 
 # Extract information from JSON
-model_name=$(echo "$input" | jq -r '.model.display_name')
+model_name=$(echo "$input" | jq -r '.model.display_name' | cut -c1)
 current_dir=$(echo "$input" | jq -r '.workspace.current_dir')
 
 # Extract cost information - only if configured to show
@@ -62,24 +62,7 @@ if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
  # Get git status with file counts
  status_output=$(git status --porcelain 2>/dev/null)
 
- if [ -n "$status_output" ]; then
- # Count files and get basic line stats
- total_files=$(echo "$status_output" | wc -l | xargs)
- line_stats=$(git diff --numstat HEAD 2>/dev/null | awk '{added+=$1; removed+=$2} END {print added+0, removed+0}')
-
- added=$(echo $line_stats | cut -d' ' -f1)
- removed=$(echo $line_stats | cut -d' ' -f2)
-
- # Build status display
- git_info=" ${YELLOW}($branch${NC} ${YELLOW}|${NC} ${GRAY}${total_files} files${NC}"
-
- [ "$added" -gt 0 ] && git_info="${git_info} ${GREEN}+${added}${NC}"
- [ "$removed" -gt 0 ] && git_info="${git_info} ${RED}-${removed}${NC}"
-
- git_info="${git_info}${YELLOW})${NC}"
- else
- git_info=" ${YELLOW}($branch)${NC}"
- fi
+ git_info=" ${YELLOW}$branch${NC}"
 else
  git_info=""
 fi
@@ -87,7 +70,7 @@ fi
 # Add session cost if available
 cost_info=""
 if [ -n "$session_cost" ]; then
- cost_info=" ${GRAY}[\$$session_cost]${NC}"
+ cost_info=" ${GRAY}|${NC} ${GRAY}\$$session_cost${NC}"
 fi
 
 # Output the status line
