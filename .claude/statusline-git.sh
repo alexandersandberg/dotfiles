@@ -41,6 +41,24 @@ cd "$current_dir" 2>/dev/null || cd /
 if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
  branch=$(git branch --show-current 2>/dev/null || echo "detached")
 
+ # Handle author prefix - only truncate if more than 4 chars
+ if [[ "$branch" == */* ]]; then
+  author="${branch%%/*}"
+  branch_part="${branch#*/}"
+
+  # Only truncate author if more than 4 chars
+  if [ ${#author} -gt 4 ]; then
+   author="${author:0:4}…"
+  fi
+
+  branch="${author}/${branch_part}"
+ fi
+
+ # Truncate total to max 25 characters (including ellipsis)
+ if [ ${#branch} -gt 25 ]; then
+  branch="${branch:0:24}…"
+ fi
+
  # Get git status with file counts
  status_output=$(git status --porcelain 2>/dev/null)
 
