@@ -51,6 +51,10 @@ alias grs="git reset --soft HEAD~"
 alias gpr="git remote prune origin"
 alias gcl="git clean -df"
 
+alias gwa="git worktree add"
+alias gwr="git worktree remove"
+alias gwl="git worktree list"
+
 alias ghpr="gh pr checkout"
 
 alias sr=swift run
