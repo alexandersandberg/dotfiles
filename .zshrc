@@ -48,6 +48,7 @@ alias gpst="git push --tags origin"
 alias gpl="git pull"
 alias gr="git reset HEAD~"
 alias grs="git reset --soft HEAD~"
+alias grp="git restore -p"
 alias gpr="git remote prune origin"
 alias gcl="git clean -df"
 
